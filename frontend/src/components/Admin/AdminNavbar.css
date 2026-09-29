@@ -1,0 +1,223 @@
+.admin-navbar {
+  height: 90px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 35px;
+  border-bottom: 1px solid #eeeeee;
+  position: relative;
+  z-index: 100;
+}
+
+.admin-navbar-heading h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #29202d;
+}
+
+.admin-navbar-heading p {
+  margin: 6px 0 0;
+  color: #777;
+  font-size: 14px;
+}
+
+.admin-navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-wrapper {
+  position: relative;
+}
+
+.search-box {
+  width: 280px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+  background: #f7f5f8;
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+  color: #777;
+  transition: 0.3s;
+}
+
+.search-box:focus-within {
+  border-color: #7a316f;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(122, 49, 111, 0.08);
+}
+
+.search-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  color: #333;
+}
+
+.search-box input::placeholder {
+  color: #999;
+}
+
+.clear-search {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #777;
+  display: flex;
+  align-items: center;
+}
+
+/* =========================
+   SEARCH RESULTS
+========================= */
+
+.search-results {
+  position: absolute;
+  top: 52px;
+  right: 0;
+  width: 350px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #eeeeee;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.search-result-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 15px;
+  background: #ffffff;
+  border: none;
+  border-bottom: 1px solid #f1f1f1;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.search-result-item:hover {
+  background: #faf6fa;
+}
+
+.search-result-icon {
+  width: 36px;
+  height: 36px;
+  background: #f4eaf3;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-result-item strong {
+  display: block;
+  color: #333;
+  font-size: 14px;
+}
+
+.search-result-item p {
+  margin: 4px 0 0;
+  color: #888;
+  font-size: 12px;
+}
+
+.no-search-results {
+  padding: 25px;
+  text-align: center;
+  color: #888;
+}
+
+.no-search-results p {
+  margin: 8px 0 0;
+}
+
+/* =========================
+   PROFILE
+========================= */
+
+.admin-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #eeeeee;
+  background: #ffffff;
+  padding: 7px 12px 7px 7px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.admin-profile:hover {
+  background: #faf7fa;
+  border-color: #d9c3d5;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #7a316f;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.admin-profile h4 {
+  margin: 0;
+  color: #333;
+  font-size: 14px;
+}
+
+.admin-profile p {
+  margin: 3px 0 0;
+  color: #888;
+  font-size: 11px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .search-box {
+    width: 220px;
+  }
+
+  .admin-navbar {
+    padding: 0 20px;
+  }
+
+  .admin-navbar-right {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  .admin-navbar-heading {
+    display: none;
+  }
+
+  .search-box {
+    width: 200px;
+  }
+
+  .admin-profile > div:last-child {
+    display: none;
+  }
+}

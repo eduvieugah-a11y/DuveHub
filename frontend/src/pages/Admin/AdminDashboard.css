@@ -1,0 +1,47 @@
+.admin-layout{
+    display:flex;
+    min-height:100vh;
+    background:#f4f6fb;
+}
+
+.admin-main{
+    flex:1;
+}
+
+.admin-content{
+    padding:30px;
+}
+
+.admin-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.admin-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+}
+
+.admin-card h2{
+    color:#7a316f;
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.dashboard-sections{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+    margin-top:30px;
+}
+
+.recent-bookings,
+.latest-events{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+}

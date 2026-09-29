@@ -1,0 +1,164 @@
+.organiser-hero {
+  width: 100%;
+  min-height: 100vh;
+  padding: 120px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 70px;
+  background: linear-gradient(135deg, #f8f5ff, #ffffff);
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.badge {
+  display: inline-block;
+  background: #7a31c2;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.hero-left h1 {
+  font-size: 54px;
+  line-height: 1.2;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.hero-left p {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+.hero-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.hero-features div {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  color: #444;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  transition: .3s;
+}
+
+.hero-features div:hover {
+  transform: translateY(-6px);
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-right form {
+  width: 100%;
+  max-width: 520px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.12);
+}
+
+.hero-right h2 {
+  text-align: center;
+  color: #7a31c2;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+.hero-right input,
+.hero-right select,
+.hero-right textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 18px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  font-size: 16px;
+  transition: .3s;
+  background: #fafafa;
+}
+
+.hero-right input:focus,
+.hero-right select:focus,
+.hero-right textarea:focus {
+  border-color: #7a31c2;
+  box-shadow: 0 0 8px rgba(122,49,194,.2);
+}
+
+.hero-right textarea {
+  resize: vertical;
+}
+
+.hero-right button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #7a31c2;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.hero-right button:hover {
+  background: #6328a2;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 992px) {
+  .organiser-hero {
+    flex-direction: column;
+    padding: 100px 25px;
+  }
+
+  .hero-left {
+    text-align: center;
+  }
+
+  .hero-left h1 {
+    font-size: 40px;
+  }
+
+  .hero-features {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-right {
+    width: 100%;
+  }
+
+  .hero-right form {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-left h1 {
+    font-size: 32px;
+  }
+
+  .hero-left p {
+    font-size: 16px;
+  }
+
+  .hero-right form {
+    padding: 25px;
+  }
+}

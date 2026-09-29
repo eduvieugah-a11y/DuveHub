@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 18px 35px;
+  background: #fff;
+  border-radius: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.logo {
+  color: #7c3aed;
+  font-size: 2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+  align-items: center;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  font-size: 1.05rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #7c3aed;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.mobile-buttons {
+  display: none;
+}
+
+.login-btn,
+.signup-btn {
+  padding: 10px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.login-btn {
+  border: 2px solid #7c3aed;
+  background: white;
+  color: #7c3aed;
+}
+
+.login-btn:hover {
+  background: #7c3aed;
+  color: white;
+}
+
+.signup-btn {
+  border: none;
+  background: #7c3aed;
+  color: white;
+}
+
+.signup-btn:hover {
+  background: #6d28d9;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #7c3aed;
+}
+
+/* ========== Tablet ========== */
+
+@media (max-width: 992px) {
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-buttons {
+    gap: 10px;
+  }
+
+  .login-btn,
+  .signup-btn {
+    padding: 8px 18px;
+  }
+}
+
+/* ========== Mobile ========== */
+
+@media (max-width: 768px) {
+
+  .menu-icon {
+    display: block;
+    z-index: 1001;
+  }
+
+  .nav-buttons {
+    display: none;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    gap: 25px;
+    padding: 30px 0;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.1);
+    transition: .4s;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .mobile-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 90%;
+  }
+
+  .mobile-buttons button {
+    width: 100%;
+  }
+}

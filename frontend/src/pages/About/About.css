@@ -1,0 +1,41 @@
+.about{
+    padding:80px 10%;
+    background:#f8fafc;
+}
+
+.about-container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.about-text{
+    flex:1;
+    min-width:300px;
+}
+
+.about-text h1{
+    font-size:48px;
+    color:#222;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    font-size:18px;
+    color:#666;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.about-image{
+    flex:1;
+    min-width:300px;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}

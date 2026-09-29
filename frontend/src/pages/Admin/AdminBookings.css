@@ -1,0 +1,250 @@
+/* =========================
+   TICKET SALES PAGE
+========================= */
+
+.admin-bookings {
+  padding: 35px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* PAGE HEADER */
+
+.admin-bookings h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #33205f;
+}
+
+.admin-bookings > p {
+  margin: 8px 0 30px;
+  color: #777;
+  font-size: 15px;
+}
+
+
+/* =========================
+   SUMMARY CARDS
+========================= */
+
+.booking-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 35px;
+}
+
+.booking-summary-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 25px;
+  border: 1px solid #eee8f8;
+  box-shadow: 0 6px 20px rgba(70, 40, 120, 0.07);
+  transition: 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.booking-summary-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  background: #7b3fe4;
+}
+
+.booking-summary-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(70, 40, 120, 0.12);
+}
+
+.booking-summary-card h2 {
+  margin: 0 0 8px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #6b35c9;
+}
+
+.booking-summary-card p {
+  margin: 0;
+  color: #777;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+/* =========================
+   TABLE CONTAINER
+========================= */
+
+.admin-bookings table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 22px rgba(70, 40, 120, 0.07);
+  border: 1px solid #eee8f8;
+}
+
+
+/* TABLE HEADER */
+
+.admin-bookings thead {
+  background: #6f35c9;
+}
+
+.admin-bookings th {
+  color: #ffffff;
+  padding: 17px 16px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+
+/* TABLE BODY */
+
+.admin-bookings td {
+  padding: 17px 16px;
+  border-bottom: 1px solid #f0edf5;
+  color: #444;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.admin-bookings tbody tr {
+  transition: background 0.2s ease;
+}
+
+.admin-bookings tbody tr:hover {
+  background: #faf8ff;
+}
+
+.admin-bookings tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* BOOKING REFERENCE */
+
+.admin-bookings td:first-child {
+  color: #6330b5;
+  font-weight: 600;
+}
+
+
+/* EVENT NAME */
+
+.admin-bookings td:nth-child(4) {
+  font-weight: 600;
+  color: #333;
+}
+
+
+/* TOTAL */
+
+.admin-bookings td:nth-child(6) {
+  font-weight: 600;
+  color: #333;
+}
+
+
+/* =========================
+   DELETE BUTTON
+========================= */
+
+.admin-bookings .delete-btn {
+  border: none;
+  background: #fff0f2;
+  color: #d93656;
+  padding: 9px 15px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.admin-bookings .delete-btn:hover {
+  background: #d93656;
+  color: #ffffff;
+}
+
+
+/* =========================
+   NO BOOKINGS
+========================= */
+
+.no-bookings {
+  background: #ffffff;
+  border: 1px solid #eee8f8;
+  border-radius: 16px;
+  padding: 60px 30px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(70, 40, 120, 0.06);
+}
+
+.no-bookings h2 {
+  margin: 0 0 10px;
+  color: #49306f;
+  font-size: 22px;
+}
+
+.no-bookings p {
+  margin: 0;
+  color: #888;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+  .booking-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .admin-bookings {
+    padding: 25px;
+  }
+
+  .admin-bookings table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+
+@media (max-width: 650px) {
+
+  .admin-bookings {
+    padding: 20px 15px;
+  }
+
+  .admin-bookings h1 {
+    font-size: 26px;
+  }
+
+  .booking-summary {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .booking-summary-card {
+    padding: 20px;
+  }
+
+  .admin-bookings th,
+  .admin-bookings td {
+    padding: 13px 12px;
+  }
+}

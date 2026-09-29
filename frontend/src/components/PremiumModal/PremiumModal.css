@@ -1,0 +1,185 @@
+/* ================================
+   PREMIUM MODAL OVERLAY
+================================ */
+
+.premium-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(25, 15, 40, 0.55);
+  backdrop-filter: blur(5px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 9999;
+  padding: 20px;
+}
+
+/* ================================
+   MODAL
+================================ */
+
+.premium-modal {
+  width: 100%;
+  max-width: 460px;
+
+  background: #ffffff;
+  border-radius: 22px;
+
+  padding: 35px;
+
+  box-shadow: 0 25px 70px rgba(40, 20, 60, 0.25);
+
+  text-align: center;
+
+  animation: premiumModalIn 0.25s ease-out;
+}
+
+@keyframes premiumModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ================================
+   TITLE
+================================ */
+
+.premium-modal h2 {
+  margin: 0 0 15px;
+
+  font-size: 27px;
+  font-weight: 700;
+
+  color: #596780;
+}
+
+/* ================================
+   DESCRIPTION
+================================ */
+
+.premium-modal > p {
+  margin: 0 auto 25px;
+
+  color: #7d8798;
+
+  font-size: 15px;
+  line-height: 1.6;
+
+  max-width: 370px;
+}
+
+.premium-modal strong {
+  color: #8e35c7;
+}
+
+/* ================================
+   FEATURES
+================================ */
+
+.premium-features {
+  background: #faf7fd;
+
+  border-radius: 14px;
+
+  padding: 18px 20px;
+
+  margin-bottom: 28px;
+
+  text-align: left;
+}
+
+.premium-features p {
+  margin: 9px 0;
+
+  font-size: 15px;
+  color: #697386;
+}
+
+/* ================================
+   BUTTONS
+================================ */
+
+.premium-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.premium-buttons button {
+  flex: 1;
+
+  padding: 13px 18px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+/* Upgrade */
+
+.upgrade-btn {
+  border: none;
+
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    #7b18c9,
+    #c026d3
+  );
+}
+
+.upgrade-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(155, 61, 210, 0.3);
+}
+
+/* Maybe later */
+
+.later-btn {
+  background: white;
+
+  color: #737d8d;
+
+  border: 1px solid #dddde7;
+}
+
+.later-btn:hover {
+  background: #f7f7fa;
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 500px) {
+  .premium-modal {
+    padding: 27px 20px;
+  }
+
+  .premium-modal h2 {
+    font-size: 23px;
+  }
+
+  .premium-buttons {
+    flex-direction: column;
+  }
+
+  .premium-buttons button {
+    width: 100%;
+  }
+}

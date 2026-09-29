@@ -1,0 +1,150 @@
+.hero{
+    width:90%;
+    max-width:1300px;
+    margin:40px auto;
+    border-radius:25px;
+    overflow:hidden;
+    margin-bottom: 60px;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+        url("../../assets/images/event.jpeg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    min-height:620px;
+
+    display:flex;
+    align-items:center;
+    padding:50px 20px;
+}
+
+.hero-content{
+    max-width:550px;
+}
+
+.hero-badge{
+    display:inline-block;
+    background:rgba(130,82,255,.85);
+    color:#fff;
+    padding:10px 20px;
+    border-radius:30px;
+    margin-bottom:25px;
+    font-size:14px;
+}
+
+.hero h1{
+    font-size:60px;
+    line-height:1.1;
+    color:white;
+    margin-bottom:20px;
+    font-weight:700;
+}
+
+.hero h1 span{
+    color:#b98cff;
+}
+
+.hero p{
+    color:#f3f3f3;
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:18px;
+}
+
+.explore-btn,
+.create-btn{
+    padding:15px 30px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.explore-btn{
+    background:#6A38D9;
+    color:#fff;
+}
+
+.explore-btn:hover{
+    background:#5323b8;
+}
+
+.create-btn{
+    background:#fff;
+    color:#6A38D9;
+}
+
+.create-btn:hover{
+    background:#f3f3f3;
+}
+
+@media (max-width:768px){
+
+.hero{
+    width:94%;
+    min-height:500px;
+    padding:30px 20px;
+    text-align:center;
+    justify-content:center;
+}
+
+.hero-content{
+    max-width:100%;
+}
+
+.hero h1{
+    font-size:42px;
+}
+
+.hero p{
+    font-size:16px;
+}
+
+.hero-buttons{
+    flex-direction:column;
+    gap:15px;
+    width:100%;
+}
+
+.hero-buttons button{
+    width:100%;
+}
+
+}
+
+@media (max-width:480px){
+
+.hero{
+    min-height:650px;
+    padding:20px 18px;
+}
+
+.hero-badge{
+    font-size:12px;
+    padding:8px 15px;
+}
+
+.hero h1{
+    font-size:36px;
+}
+
+.hero p{
+    font-size:15px;
+}
+
+.hero-buttons button{
+    padding:15px;
+    font-size:15px;
+}
+
+}
