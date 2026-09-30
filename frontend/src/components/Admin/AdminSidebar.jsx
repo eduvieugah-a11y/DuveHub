@@ -19,6 +19,7 @@ function AdminSidebar() {
 
   const handleLogout = () => {
     localStorage.removeItem("user");
+    localStorage.removeItem("token");
     navigate("/");
     window.location.reload();
   };
