@@ -66,6 +66,11 @@ function AdminSidebar() {
       {/* ADMIN MENU */}
       {user?.role === "admin" && (
         <>
+          <NavLink to="/admin/create-event">
+            <PlusCircle size={20} />
+            Create Event
+          </NavLink>
+          
           <NavLink to="/admin/events">
             <CalendarDays size={20} />
             All Events
