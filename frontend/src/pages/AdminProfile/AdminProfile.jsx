@@ -41,9 +41,7 @@ function AdminProfile() {
 
       alert("Profile updated successfully! 🎉");
 
-      navigate("/admin/profile");
-
-      window.location.reload();
+      navigate("/admin");
 
     } catch (error) {
       console.error(error);
